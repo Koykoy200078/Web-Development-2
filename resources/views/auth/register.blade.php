@@ -1,6 +1,7 @@
 @extends('base')
 @section('title', 'Register')
 
+@section('content')
 @if(session('success'))
 <div class="alert alert-success" id="success">
     {{ Session::get('success') }}
@@ -34,3 +35,4 @@
 
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
+@endsection

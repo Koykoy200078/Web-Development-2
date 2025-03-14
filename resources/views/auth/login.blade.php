@@ -1,6 +1,6 @@
 @extends('base')
 @section('title', 'Login')
-
+@section('content')
 @if(session('success'))
 <div class="alert alert-success" id="success">
     {{ Session::get('success') }}
@@ -31,4 +31,5 @@
     <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
-<a href="" class="btn btn-secondary">Register</a>
+<a href="{{ route('auth.register') }}" class="btn btn-secondary">Register</a>
+@endsection
